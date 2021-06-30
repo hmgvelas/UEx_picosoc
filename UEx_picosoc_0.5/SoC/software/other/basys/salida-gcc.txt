@@ -1,0 +1,50 @@
+/opt/riscv32i/bin/riscv32-unknown-elf-gcc -v -DBASYS3 -march=rv32i -Wl,-Bstatic,-T,basys3_sections.lds,--strip-debug -ffreestanding -nostdlib --save-temps -o basys3_fw.elf start.s firmware.c
+Using built-in specs.
+COLLECT_GCC=/opt/riscv32i/bin/riscv32-unknown-elf-gcc
+COLLECT_LTO_WRAPPER=/opt/riscv32i/libexec/gcc/riscv32-unknown-elf/8.2.0/lto-wrapper
+Target: riscv32-unknown-elf
+Configured with: /home/horacio/src/VHDL/Vivado/picorv32/riscv-gnu-toolchain-riscv32i/build/../riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/opt/riscv32i --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/opt/riscv32i/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --src=../../riscv-gcc --enable-checking=yes --disable-multilib --with-abi=ilp32 --with-arch=rv32i 'CFLAGS_FOR_TARGET=-Os  -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os  -mcmodel=medlow'
+Thread model: single
+gcc version 8.2.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-D' 'BASYS3' '-march=rv32i' '-ffreestanding' '-nostdlib' '-save-temps' '-o' 'basys3_fw.elf' '-mabi=ilp32'
+
+
+ /opt/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32i -mabi=ilp32 -o start.o start.s
+GNU ensamblador versión 2.31.1 (riscv32-unknown-elf) utilizando BFD versión (GNU Binutils) 2.31.1
+COLLECT_GCC_OPTIONS='-v' '-D' 'BASYS3' '-march=rv32i' '-ffreestanding' '-nostdlib' '-save-temps' '-o' 'basys3_fw.elf' '-mabi=ilp32'
+
+
+ /opt/riscv32i/libexec/gcc/riscv32-unknown-elf/8.2.0/cc1 -E -quiet -v -D BASYS3 firmware.c -march=rv32i -mabi=ilp32 -ffreestanding -fpch-preprocess -o firmware.i
+ignoring nonexistent directory "/opt/riscv32i/riscv32-unknown-elf/usr/local/include"
+ignoring duplicate directory "/opt/riscv32i/riscv32-unknown-elf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/include
+ /opt/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/include-fixed
+ /opt/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/../../../../riscv32-unknown-elf/include
+End of search list.
+COLLECT_GCC_OPTIONS='-v' '-D' 'BASYS3' '-march=rv32i' '-ffreestanding' '-nostdlib' '-save-temps' '-o' 'basys3_fw.elf' '-mabi=ilp32'
+
+
+ /opt/riscv32i/libexec/gcc/riscv32-unknown-elf/8.2.0/cc1 -fpreprocessed firmware.i -quiet -dumpbase firmware.c -march=rv32i -mabi=ilp32 -auxbase firmware -version -ffreestanding -o firmware.s
+GNU C17 (GCC) version 8.2.0 (riscv32-unknown-elf)
+	compiled by GNU C version 9.3.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
+GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096
+GNU C17 (GCC) version 8.2.0 (riscv32-unknown-elf)
+	compiled by GNU C version 9.3.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
+GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096
+Compiler executable checksum: 2569e731606a22218a3b6bd05aacc988
+COLLECT_GCC_OPTIONS='-v' '-D' 'BASYS3' '-march=rv32i' '-ffreestanding' '-nostdlib' '-save-temps' '-o' 'basys3_fw.elf' '-mabi=ilp32'
+
+
+ /opt/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32i -mabi=ilp32 -o firmware.o firmware.s
+GNU ensamblador versión 2.31.1 (riscv32-unknown-elf) utilizando BFD versión (GNU Binutils) 2.31.1
+COMPILER_PATH=/opt/riscv32i/libexec/gcc/riscv32-unknown-elf/8.2.0/:/opt/riscv32i/libexec/gcc/riscv32-unknown-elf/8.2.0/:/opt/riscv32i/libexec/gcc/riscv32-unknown-elf/:/opt/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/:/opt/riscv32i/lib/gcc/riscv32-unknown-elf/:/opt/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/../../../../riscv32-unknown-elf/bin/
+LIBRARY_PATH=/opt/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/:/opt/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/../../../../riscv32-unknown-elf/lib/:/opt/riscv32i/riscv32-unknown-elf/lib/
+COLLECT_GCC_OPTIONS='-v' '-D' 'BASYS3' '-march=rv32i' '-ffreestanding' '-nostdlib' '-save-temps' '-o' 'basys3_fw.elf' '-mabi=ilp32'
+
+
+ /opt/riscv32i/libexec/gcc/riscv32-unknown-elf/8.2.0/collect2 -plugin /opt/riscv32i/libexec/gcc/riscv32-unknown-elf/8.2.0/liblto_plugin.so -plugin-opt=/opt/riscv32i/libexec/gcc/riscv32-unknown-elf/8.2.0/lto-wrapper -plugin-opt=-fresolution=start.res --sysroot=/opt/riscv32i/riscv32-unknown-elf -melf32lriscv -o basys3_fw.elf -L/opt/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0 -L/opt/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/../../../../riscv32-unknown-elf/lib -L/opt/riscv32i/riscv32-unknown-elf/lib -Bstatic -T basys3_sections.lds --strip-debug start.o firmware.o
+COLLECT_GCC_OPTIONS='-v' '-D' 'BASYS3' '-march=rv32i' '-ffreestanding' '-nostdlib' '-save-temps' '-o' 'basys3_fw.elf' '-mabi=ilp32'
+
+

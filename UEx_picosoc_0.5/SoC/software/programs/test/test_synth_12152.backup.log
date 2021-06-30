@@ -1,0 +1,1691 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Jun 25 10:56:42 2021
+# Process ID: 12152
+# Current directory: /home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/software/programs/test
+# Command line: vivado -nojournal -log test_synth.log -mode batch -source test_synth.tcl
+# Log file: /home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/software/programs/test/test_synth.log
+# Journal file: 
+#-----------------------------------------------------------
+Sourcing tcl script '/home/horacio/.Xilinx/Vivado/Vivado_init.tcl'
+source test_synth.tcl
+# read_verilog ../../../hdl/top.v
+# read_verilog ../../../hdl/picosoc/picosoc.v
+# read_verilog ../../../hdl/picosoc/uart/simpleuart.v
+# read_verilog ../../../hdl/picosoc/spimemio/spimemio.v
+# read_verilog ../../../hdl/picorv32/picorv32.v
+# read_xdc ../../../hdl/constraints/basys3-example.xdc
+# synth_design -part xc7a35t-cpg236-1 -top basys3
+Command: synth_design -part xc7a35t-cpg236-1 -top basys3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12174 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1433.891 ; gain = 88.781 ; free physical = 10055 ; free virtual = 45030
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'basys3' [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/top.v:42]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/top.v:68]
+INFO: [Synth 8-6157] synthesizing module 'STARTUPE2' [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50881]
+	Parameter PROG_USR bound to: FALSE - type: string 
+	Parameter SIM_CCLK_FREQ bound to: 0.000000 - type: float 
+INFO: [Synth 8-6155] done synthesizing module 'STARTUPE2' (1#1) [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50881]
+WARNING: [Synth 8-350] instance 'STARTUPE2_inst' of module 'STARTUPE2' requires 13 connections, but only 2 given [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/top.v:68]
+INFO: [Synth 8-6157] synthesizing module 'PLLE2_BASE' [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:40136]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 8 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'PLLE2_BASE' (2#1) [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:40136]
+INFO: [Synth 8-6157] synthesizing module 'picosoc' [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/picosoc.v:36]
+	Parameter BARREL_SHIFTER bound to: 1'b1 
+	Parameter ENABLE_MULDIV bound to: 1'b0 
+	Parameter ENABLE_COMPRESSED bound to: 1'b0 
+	Parameter ENABLE_COUNTERS bound to: 1'b1 
+	Parameter ENABLE_IRQ_QREGS bound to: 1'b0 
+	Parameter MEM_WORDS bound to: 256 - type: integer 
+	Parameter STACKADDR bound to: 32'b00000000000000000000010000000000 
+	Parameter PROGADDR_RESET bound to: 1048576 - type: integer 
+	Parameter PROGADDR_IRQ bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'picorv32' [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:62]
+	Parameter ENABLE_COUNTERS bound to: 1'b1 
+	Parameter ENABLE_COUNTERS64 bound to: 1'b1 
+	Parameter ENABLE_REGS_16_31 bound to: 1'b1 
+	Parameter ENABLE_REGS_DUALPORT bound to: 1'b1 
+	Parameter LATCHED_MEM_RDATA bound to: 1'b0 
+	Parameter TWO_STAGE_SHIFT bound to: 1'b1 
+	Parameter BARREL_SHIFTER bound to: 1'b1 
+	Parameter TWO_CYCLE_COMPARE bound to: 1'b0 
+	Parameter TWO_CYCLE_ALU bound to: 1'b0 
+	Parameter COMPRESSED_ISA bound to: 1'b0 
+	Parameter CATCH_MISALIGN bound to: 1'b1 
+	Parameter CATCH_ILLINSN bound to: 1'b1 
+	Parameter ENABLE_PCPI bound to: 1'b0 
+	Parameter ENABLE_MUL bound to: 1'b0 
+	Parameter ENABLE_FAST_MUL bound to: 1'b0 
+	Parameter ENABLE_DIV bound to: 1'b0 
+	Parameter ENABLE_IRQ bound to: 1'b1 
+	Parameter ENABLE_IRQ_QREGS bound to: 1'b0 
+	Parameter ENABLE_IRQ_TIMER bound to: 1'b1 
+	Parameter ENABLE_TRACE bound to: 1'b0 
+	Parameter REGS_INIT_ZERO bound to: 1'b0 
+	Parameter MASKED_IRQ bound to: 0 - type: integer 
+	Parameter LATCHED_IRQ bound to: -1 - type: integer 
+	Parameter PROGADDR_RESET bound to: 1048576 - type: integer 
+	Parameter PROGADDR_IRQ bound to: 0 - type: integer 
+	Parameter STACKADDR bound to: 32'b00000000000000000000010000000000 
+	Parameter irq_timer bound to: 0 - type: integer 
+	Parameter irq_ebreak bound to: 1 - type: integer 
+	Parameter irq_buserror bound to: 2 - type: integer 
+	Parameter irqregs_offset bound to: 32 - type: integer 
+	Parameter regfile_size bound to: 32 - type: integer 
+	Parameter regindex_bits bound to: 5 - type: integer 
+	Parameter WITH_PCPI bound to: 1'b0 
+	Parameter TRACE_BRANCH bound to: 36'b000100000000000000000000000000000000 
+	Parameter TRACE_ADDR bound to: 36'b001000000000000000000000000000000000 
+	Parameter TRACE_IRQ bound to: 36'b100000000000000000000000000000000000 
+	Parameter cpu_state_trap bound to: 8'b10000000 
+	Parameter cpu_state_fetch bound to: 8'b01000000 
+	Parameter cpu_state_ld_rs1 bound to: 8'b00100000 
+	Parameter cpu_state_ld_rs2 bound to: 8'b00010000 
+	Parameter cpu_state_exec bound to: 8'b00001000 
+	Parameter cpu_state_shift bound to: 8'b00000100 
+	Parameter cpu_state_stmem bound to: 8'b00000010 
+	Parameter cpu_state_ldmem bound to: 8'b00000001 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:403]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1117]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1247]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1247]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1264]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1264]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1310]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1310]
+INFO: [Synth 8-6157] synthesizing module 'picosoc_regs' [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/picosoc.v:222]
+INFO: [Synth 8-6155] done synthesizing module 'picosoc_regs' (3#1) [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/picosoc.v:222]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1481]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1481]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1493]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1493]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1579]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1579]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1579]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1623]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1623]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1731]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1762]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1762]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1832]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1832]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1840]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1840]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1855]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1855]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1880]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1880]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1897]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1897]
+WARNING: [Synth 8-6014] Unused sequential element mem_la_firstword_reg_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:392]
+WARNING: [Synth 8-6014] Unused sequential element last_mem_valid_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:393]
+WARNING: [Synth 8-6014] Unused sequential element next_insn_opcode_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:433]
+WARNING: [Synth 8-6014] Unused sequential element mem_la_secondword_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:571]
+WARNING: [Synth 8-6014] Unused sequential element prefetched_high_word_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:572]
+WARNING: [Synth 8-6014] Unused sequential element q_ascii_instr_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:777]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_imm_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:778]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_opcode_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:779]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rs1_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:780]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rs2_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:781]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rd_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:782]
+WARNING: [Synth 8-6014] Unused sequential element dbg_next_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:783]
+WARNING: [Synth 8-6014] Unused sequential element dbg_valid_insn_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:786]
+WARNING: [Synth 8-6014] Unused sequential element cached_ascii_instr_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:791]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_imm_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:792]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_opcode_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:794]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rs1_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:797]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rs2_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:798]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rd_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:799]
+WARNING: [Synth 8-6014] Unused sequential element dbg_insn_addr_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:803]
+WARNING: [Synth 8-6014] Unused sequential element is_sll_srl_sra_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1107]
+WARNING: [Synth 8-6014] Unused sequential element clear_prefetched_high_word_q_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1288]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_rinst_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1401]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_rdata_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1402]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_wdata_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1403]
+WARNING: [Synth 8-6014] Unused sequential element alu_out_0_q_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1405]
+WARNING: [Synth 8-6014] Unused sequential element alu_wait_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1408]
+WARNING: [Synth 8-6014] Unused sequential element alu_wait_2_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1409]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs1val_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1412]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs2val_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1413]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs1val_valid_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1414]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs2val_valid_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1415]
+WARNING: [Synth 8-6014] Unused sequential element next_irq_pending_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1435]
+WARNING: [Synth 8-6014] Unused sequential element decoder_trigger_q_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1442]
+WARNING: [Synth 8-6014] Unused sequential element decoder_pseudo_trigger_q_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1444]
+WARNING: [Synth 8-6014] Unused sequential element latched_trace_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1460]
+WARNING: [Synth 8-6014] Unused sequential element current_pc_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1490]
+INFO: [Synth 8-6155] done synthesizing module 'picorv32' (4#1) [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:62]
+WARNING: [Synth 8-350] instance 'cpu' of module 'picorv32' requires 27 connections, but only 10 given [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/picosoc.v:143]
+INFO: [Synth 8-6157] synthesizing module 'spimemio' [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/spimemio/spimemio.v:20]
+INFO: [Synth 8-6157] synthesizing module 'spimemio_xfer' [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/spimemio/spimemio.v:378]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/spimemio/spimemio.v:464]
+WARNING: [Synth 8-6014] Unused sequential element xfer_cont_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/spimemio/spimemio.v:544]
+INFO: [Synth 8-6155] done synthesizing module 'spimemio_xfer' (5#1) [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/spimemio/spimemio.v:378]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/spimemio/spimemio.v:235]
+INFO: [Synth 8-6155] done synthesizing module 'spimemio' (6#1) [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/spimemio/spimemio.v:20]
+INFO: [Synth 8-6157] synthesizing module 'simpleuart' [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/uart/simpleuart.v:20]
+	Parameter DEFAULT_DIV bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'simpleuart' (7#1) [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/uart/simpleuart.v:20]
+INFO: [Synth 8-6157] synthesizing module 'picosoc_mem' [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/picosoc.v:240]
+	Parameter WORDS bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'picosoc_mem' (8#1) [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/picosoc.v:240]
+INFO: [Synth 8-6155] done synthesizing module 'picosoc' (9#1) [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/picosoc.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'basys3' (10#1) [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/top.v:42]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[21]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[20]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[19]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[18]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[17]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[16]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[15]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[14]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[13]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[12]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[11]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[10]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[9]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[8]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[31]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[30]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[29]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[28]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[27]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[26]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[25]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[24]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[23]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[22]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[21]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[20]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[19]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[18]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[17]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[16]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[15]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[14]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[13]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[12]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[11]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[10]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[9]
+WARNING: [Synth 8-3331] design simpleuart has unconnected port reg_dat_di[8]
+WARNING: [Synth 8-3331] design spimemio_xfer has unconnected port din_cont
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[30]
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[29]
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[28]
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[27]
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[26]
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[25]
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[24]
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[23]
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[15]
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[14]
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[13]
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[12]
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[7]
+WARNING: [Synth 8-3331] design spimemio has unconnected port cfgreg_di[6]
+WARNING: [Synth 8-3331] design picosoc_regs has unconnected port waddr[5]
+WARNING: [Synth 8-3331] design picosoc_regs has unconnected port raddr1[5]
+WARNING: [Synth 8-3331] design picosoc_regs has unconnected port raddr2[5]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_wr
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[31]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[30]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[29]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[28]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[27]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[26]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[25]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[24]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[23]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[22]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[21]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[20]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[19]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[18]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[17]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[16]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[15]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[14]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[13]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[12]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[11]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[10]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[9]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[8]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[7]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[6]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[5]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[4]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[3]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[2]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[1]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[0]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_wait
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_ready
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1487.516 ; gain = 142.406 ; free physical = 10046 ; free virtual = 45028
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1487.516 ; gain = 142.406 ; free physical = 10050 ; free virtual = 45031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1487.516 ; gain = 142.406 ; free physical = 10050 ; free virtual = 45031
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/constraints/basys3-example.xdc]
+WARNING: [Vivado 12-584] No ports matched 'QspiCSn'. [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/constraints/basys3-example.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/constraints/basys3-example.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QspiCSn'. [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/constraints/basys3-example.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/constraints/basys3-example.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/constraints/basys3-example.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/constraints/basys3-example.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/basys3_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/basys3_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  PLLE2_BASE => PLLE2_ADV: 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1820.828 ; gain = 0.000 ; free physical = 9714 ; free virtual = 44732
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1820.828 ; gain = 475.719 ; free physical = 9806 ; free virtual = 44820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1820.828 ; gain = 475.719 ; free physical = 9805 ; free virtual = 44820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1820.828 ; gain = 475.719 ; free physical = 9802 ; free virtual = 44820
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'instr_setq_reg' into 'instr_getq_reg' [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1088]
+WARNING: [Synth 8-6014] Unused sequential element instr_setq_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1088]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picorv32/picorv32.v:1235]
+INFO: [Synth 8-802] inferred FSM for state register 'irq_state_reg' in module 'picorv32'
+INFO: [Synth 8-5546] ROM "cpu_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_op1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "next_irq_pending" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                              001 |                               00
+                 iSTATE1 |                              010 |                               01
+                  iSTATE |                              100 |                               10
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'irq_state_reg' using encoding 'one-hot' in module 'picorv32'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 1820.828 ; gain = 475.719 ; free physical = 9779 ; free virtual = 44798
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 7     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     25 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
+	   3 Input      4 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               36 Bit    Registers := 1     
+	               32 Bit    Registers := 22    
+	               24 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 12    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 116   
++---RAMs : 
+	               8K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 42    
+	  10 Input     32 Bit        Muxes := 4     
+	   9 Input     32 Bit        Muxes := 4     
+	   5 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   4 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 12    
+	  10 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 2     
+	   9 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
+	   9 Input      5 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 15    
+	  14 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   5 Input      2 Bit        Muxes := 1     
+	   9 Input      2 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 35    
+	   2 Input      1 Bit        Muxes := 75    
+	   4 Input      1 Bit        Muxes := 9     
+	  10 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 14    
+	   6 Input      1 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module basys3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module picorv32 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               36 Bit    Registers := 1     
+	               32 Bit    Registers := 16    
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 83    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 32    
+	  10 Input     32 Bit        Muxes := 4     
+	   9 Input     32 Bit        Muxes := 4     
+	   5 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 9     
+	  10 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   9 Input      5 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   9 Input      2 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 35    
+	   2 Input      1 Bit        Muxes := 36    
+	   4 Input      1 Bit        Muxes := 5     
+	  10 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 4     
+Module spimemio_xfer 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      4 Bit       Adders := 4     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+	   6 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 10    
+Module spimemio 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
+	                1 Bit    Registers := 20    
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  14 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+	  14 Input      1 Bit        Muxes := 9     
+Module simpleuart 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 4     
+Module picosoc_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	               8K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 1     
+Module picosoc 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "next_irq_pending" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element din_cont_reg was removed.  [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/picosoc/spimemio/spimemio.v:181]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[21]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[20]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[19]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[18]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[17]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[16]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[15]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[14]
+WARNING: [Synth 8-3331] design picosoc_mem has unconnected port addr[13]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\soc/simpleuart/send_pattern_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\soc/spimemio/din_tag_reg[3] )
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_rs1_reg_rep[0]' (FDSE) to 'soc/cpu/decoded_rs1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_rs1_reg_rep[1]' (FDSE) to 'soc/cpu/decoded_rs1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_rs1_reg_rep[2]' (FDRE) to 'soc/cpu/decoded_rs1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_rs1_reg_rep[3]' (FDRE) to 'soc/cpu/decoded_rs1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_rs1_reg_rep[4]' (FDRE) to 'soc/cpu/decoded_rs1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_rs2_reg[0]' (FDE) to 'soc/cpu/decoded_imm_j_reg[11]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_rs2_reg[1]' (FDE) to 'soc/cpu/decoded_imm_j_reg[1]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_rs2_reg[2]' (FDE) to 'soc/cpu/decoded_imm_j_reg[2]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_rs2_reg[3]' (FDE) to 'soc/cpu/decoded_imm_j_reg[3]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_rs2_reg[4]' (FDE) to 'soc/cpu/decoded_imm_j_reg[4]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_imm_j_reg[30]' (FDE) to 'soc/cpu/decoded_imm_j_reg[20]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_imm_j_reg[31]' (FDE) to 'soc/cpu/decoded_imm_j_reg[20]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_imm_j_reg[29]' (FDE) to 'soc/cpu/decoded_imm_j_reg[20]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_imm_j_reg[28]' (FDE) to 'soc/cpu/decoded_imm_j_reg[20]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_imm_j_reg[27]' (FDE) to 'soc/cpu/decoded_imm_j_reg[20]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_imm_j_reg[26]' (FDE) to 'soc/cpu/decoded_imm_j_reg[20]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_imm_j_reg[20]' (FDE) to 'soc/cpu/decoded_imm_j_reg[21]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_imm_j_reg[21]' (FDE) to 'soc/cpu/decoded_imm_j_reg[22]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_imm_j_reg[22]' (FDE) to 'soc/cpu/decoded_imm_j_reg[23]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_imm_j_reg[23]' (FDE) to 'soc/cpu/decoded_imm_j_reg[24]'
+INFO: [Synth 8-3886] merging instance 'soc/cpu/decoded_imm_j_reg[24]' (FDE) to 'soc/cpu/decoded_imm_j_reg[25]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\soc/cpu /\decoded_imm_j_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\soc/cpu /compressed_instr_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\soc/cpu /instr_getq_reg)
+INFO: [Synth 8-3886] merging instance 'soc/cpu/cpu_state_reg[4]' (FDE) to 'soc/cpu/cpu_state_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\soc/cpu /\cpu_state_reg[2] )
+INFO: [Synth 8-3886] merging instance 'soc/cpu/mem_addr_reg[1]' (FDE) to 'soc/cpu/mem_addr_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\soc/cpu /\mem_addr_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\soc/cpu /latched_compr_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\soc/spimemio/xfer/xfer_tag_q_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (instr_getq_reg) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (cpu_state_reg[2]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (decoded_imm_j_reg[0]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (reg_sh_reg[4]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (reg_sh_reg[3]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (reg_sh_reg[2]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (reg_sh_reg[1]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (reg_sh_reg[0]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (pcpi_timeout_reg) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (instr_ecall_ebreak_reg) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (compressed_instr_reg) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (mem_instr_reg) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (mem_addr_reg[0]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (pcpi_valid_reg) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[31]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[30]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[29]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[28]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[27]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[26]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[25]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[24]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[23]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[22]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[21]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[20]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[19]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[18]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[17]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[16]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[15]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[14]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[13]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[12]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[11]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[10]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[9]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[8]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[7]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[6]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[5]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[4]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[3]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[2]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[1]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (eoi_reg[0]) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (trace_valid_reg) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (latched_compr_reg) is unused and will be removed from module picorv32.
+WARNING: [Synth 8-3332] Sequential element (soc/spimemio/din_tag_reg[3]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/spimemio/xfer/xfer_tag_reg[3]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/spimemio/xfer/xfer_tag_q_reg[3]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/simpleuart/send_pattern_reg[9]) is unused and will be removed from module basys3.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1820.828 ; gain = 475.719 ; free physical = 9775 ; free virtual = 44792
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name  | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|picosoc_mem: | mem_reg    | 256 x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object       | Inference | Size (Depth x Width) | Primitives    | 
++------------+------------------+-----------+----------------------+---------------+
+|\soc/cpu    | cpuregs/regs_reg | Implied   | 32 x 32              | RAM32M x 12   | 
++------------+------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance i_58/soc/memory/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_58/soc/memory/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 1820.828 ; gain = 475.719 ; free physical = 9646 ; free virtual = 44676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1840.836 ; gain = 495.727 ; free physical = 9645 ; free virtual = 44668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name  | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|picosoc_mem: | mem_reg    | 256 x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
++------------+------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object       | Inference | Size (Depth x Width) | Primitives    | 
++------------+------------------+-----------+----------------------+---------------+
+|\soc/cpu    | cpuregs/regs_reg | Implied   | 32 x 32              | RAM32M x 12   | 
++------------+------------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[31]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[30]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[29]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[28]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[27]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[26]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[25]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[24]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[23]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[22]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[21]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[20]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[19]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[18]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[17]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[16]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[15]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[14]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[13]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[12]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[11]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[10]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[9]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[8]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[7]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[6]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[5]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[4]) is unused and will be removed from module basys3.
+WARNING: [Synth 8-3332] Sequential element (soc/cpu/irq_pending_reg[3]) is unused and will be removed from module basys3.
+INFO: [Synth 8-4480] The timing for the instance soc/memory/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance soc/memory/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1867.859 ; gain = 522.750 ; free physical = 9632 ; free virtual = 44658
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1867.859 ; gain = 522.750 ; free physical = 9607 ; free virtual = 44658
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1867.859 ; gain = 522.750 ; free physical = 9607 ; free virtual = 44658
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1867.859 ; gain = 522.750 ; free physical = 9608 ; free virtual = 44659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1867.859 ; gain = 522.750 ; free physical = 9608 ; free virtual = 44659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1867.859 ; gain = 522.750 ; free physical = 9608 ; free virtual = 44659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1867.859 ; gain = 522.750 ; free physical = 9608 ; free virtual = 44659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     1|
+|2     |CARRY4     |   144|
+|3     |LUT1       |    44|
+|4     |LUT2       |   195|
+|5     |LUT3       |   201|
+|6     |LUT4       |   295|
+|7     |LUT5       |   310|
+|8     |LUT6       |   902|
+|9     |MUXF7      |     4|
+|10    |MUXF8      |     1|
+|11    |PLLE2_BASE |     1|
+|12    |RAM32M     |    12|
+|13    |RAMB18E1   |     1|
+|14    |STARTUPE2  |     1|
+|15    |FDRE       |   946|
+|16    |FDSE       |    66|
+|17    |IBUF       |     2|
+|18    |IOBUF      |     4|
+|19    |OBUF       |    17|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------------+--------------+------+
+|      |Instance       |Module        |Cells |
++------+---------------+--------------+------+
+|1     |top            |              |  3147|
+|2     |  soc          |picosoc       |  3044|
+|3     |    cpu        |picorv32      |  2361|
+|4     |      cpuregs  |picosoc_regs  |   293|
+|5     |    memory     |picosoc_mem   |     1|
+|6     |    simpleuart |simpleuart    |   321|
+|7     |    spimemio   |spimemio      |   349|
+|8     |      xfer     |spimemio_xfer |   143|
++------+---------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1867.859 ; gain = 522.750 ; free physical = 9608 ; free virtual = 44659
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 170 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1867.859 ; gain = 189.438 ; free physical = 9657 ; free virtual = 44714
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1867.867 ; gain = 522.750 ; free physical = 9657 ; free virtual = 44714
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 170 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/constraints/basys3-example.xdc]
+WARNING: [Vivado 12-584] No ports matched 'QspiCSn'. [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/constraints/basys3-example.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/constraints/basys3-example.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QspiCSn'. [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/constraints/basys3-example.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/constraints/basys3-example.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/horacio/src/Verilog/picosoc/UEx_picosoc/UEx_picosoc_2/SoC/hdl/constraints/basys3-example.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 17 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+  PLLE2_BASE => PLLE2_ADV: 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+109 Infos, 231 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1867.867 ; gain = 535.430 ; free physical = 9683 ; free virtual = 44728
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1899.875 ; gain = 32.008 ; free physical = 9665 ; free virtual = 44727
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 1be92720a
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 2197.039 ; gain = 297.164 ; free physical = 9310 ; free virtual = 44404
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: cac2db62
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2197.039 ; gain = 0.000 ; free physical = 9298 ; free virtual = 44392
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 165c6f33d
+
+Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2197.039 ; gain = 0.000 ; free physical = 9310 ; free virtual = 44404
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: bf1d69d7
+
+Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2197.039 ; gain = 0.000 ; free physical = 9311 ; free virtual = 44405
+INFO: [Opt 31-389] Phase Sweep created 16 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: bf1d69d7
+
+Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.32 . Memory (MB): peak = 2197.039 ; gain = 0.000 ; free physical = 9311 ; free virtual = 44405
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: a4eaf675
+
+Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.39 . Memory (MB): peak = 2197.039 ; gain = 0.000 ; free physical = 9311 ; free virtual = 44405
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: a4eaf675
+
+Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.41 . Memory (MB): peak = 2197.039 ; gain = 0.000 ; free physical = 9311 ; free virtual = 44405
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2197.039 ; gain = 0.000 ; free physical = 9311 ; free virtual = 44405
+Ending Logic Optimization Task | Checksum: a4eaf675
+
+Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:00.43 . Memory (MB): peak = 2197.039 ; gain = 0.000 ; free physical = 9311 ; free virtual = 44405
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=7.491 | TNS=0.000 |
+INFO: [Power 33-23] Power model is not available for STARTUPE2_inst
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 2
+Ending PowerOpt Patch Enables Task | Checksum: a4eaf675
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9265 ; free virtual = 44374
+Ending Power Optimization Task | Checksum: a4eaf675
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2481.379 ; gain = 284.340 ; free physical = 9274 ; free virtual = 44382
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: a4eaf675
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9274 ; free virtual = 44382
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 2481.379 ; gain = 613.512 ; free physical = 9274 ; free virtual = 44382
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9279 ; free virtual = 44377
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 2e48410e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9279 ; free virtual = 44377
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9279 ; free virtual = 44377
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 110dc85c1
+
+Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.59 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9281 ; free virtual = 44381
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1a4cf06ae
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9284 ; free virtual = 44378
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1a4cf06ae
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9284 ; free virtual = 44378
+Phase 1 Placer Initialization | Checksum: 1a4cf06ae
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9284 ; free virtual = 44378
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 198965b14
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9282 ; free virtual = 44377
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9281 ; free virtual = 44372
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+|  Optimization       |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1469c23ef
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9281 ; free virtual = 44372
+Phase 2 Global Placement | Checksum: 16b1d6ff1
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9280 ; free virtual = 44372
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 16b1d6ff1
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9280 ; free virtual = 44372
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2b128a268
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9280 ; free virtual = 44370
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 2d209b6ea
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9280 ; free virtual = 44370
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 2d209b6ea
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9280 ; free virtual = 44370
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 235533b20
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9274 ; free virtual = 44369
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 19551df85
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9275 ; free virtual = 44369
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 19551df85
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9275 ; free virtual = 44369
+Phase 3 Detail Placement | Checksum: 19551df85
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9275 ; free virtual = 44369
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 10ab6394e
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 10ab6394e
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9274 ; free virtual = 44368
+INFO: [Place 30-746] Post Placement Timing Summary WNS=7.307. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 178e82036
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9272 ; free virtual = 44366
+Phase 4.1 Post Commit Optimization | Checksum: 178e82036
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9272 ; free virtual = 44366
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 178e82036
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9273 ; free virtual = 44366
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 178e82036
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9275 ; free virtual = 44366
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 1becc1e92
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9275 ; free virtual = 44366
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1becc1e92
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9275 ; free virtual = 44366
+Ending Placer Task | Checksum: 11a195aba
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9280 ; free virtual = 44372
+INFO: [Common 17-83] Releasing license: Implementation
+16 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9280 ; free virtual = 44372
+# route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: 521629e9 ConstDB: 0 ShapeSum: c80330d1 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 14a46b873
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9078 ; free virtual = 44183
+Post Restoration Checksum: NetGraph: fabbc4f5 NumContArr: 4f8af37e Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 14a46b873
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9072 ; free virtual = 44183
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 14a46b873
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9057 ; free virtual = 44168
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 14a46b873
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9057 ; free virtual = 44168
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 20978e8e2
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9056 ; free virtual = 44163
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.318  | TNS=0.000  | WHS=-0.190 | THS=-14.033|
+
+Phase 2 Router Initialization | Checksum: 1fa12480e
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9057 ; free virtual = 44164
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 10d40adc4
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9058 ; free virtual = 44165
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 423
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.149  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1eb02aba6
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9058 ; free virtual = 44165
+Phase 4 Rip-up And Reroute | Checksum: 1eb02aba6
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9058 ; free virtual = 44165
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 23f498699
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9057 ; free virtual = 44164
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.228  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 23f498699
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9057 ; free virtual = 44164
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 23f498699
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9057 ; free virtual = 44164
+Phase 5 Delay and Skew Optimization | Checksum: 23f498699
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9057 ; free virtual = 44164
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 257f779dc
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9057 ; free virtual = 44164
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.228  | TNS=0.000  | WHS=0.070  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 21a77a7b7
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9057 ; free virtual = 44164
+Phase 6 Post Hold Fix | Checksum: 21a77a7b7
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9057 ; free virtual = 44164
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.13298 %
+  Global Horizontal Routing Utilization  = 1.23842 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 18e18e898
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9056 ; free virtual = 44164
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 18e18e898
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9056 ; free virtual = 44163
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: fdbd2e15
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9054 ; free virtual = 44162
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=7.228  | TNS=0.000  | WHS=0.070  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: fdbd2e15
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9054 ; free virtual = 44162
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9070 ; free virtual = 44178
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+13 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9070 ; free virtual = 44178
+# report_utilization
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Fri Jun 25 10:58:05 2021
+| Host         : horacio running 64-bit Ubuntu 18.04.5 LTS
+| Command      : report_utilization
+| Design       : basys3
+| Device       : 7a35tcpg236-1
+| Design State : Routed
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Slice Logic Distribution
+3. Memory
+4. DSP
+5. IO and GT Specific
+6. Clocking
+7. Specific Feature
+8. Primitives
+9. Black Boxes
+10. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++----------------------------+------+-------+-----------+-------+
+|          Site Type         | Used | Fixed | Available | Util% |
++----------------------------+------+-------+-----------+-------+
+| Slice LUTs                 | 1731 |     0 |     20800 |  8.32 |
+|   LUT as Logic             | 1683 |     0 |     20800 |  8.09 |
+|   LUT as Memory            |   48 |     0 |      9600 |  0.50 |
+|     LUT as Distributed RAM |   48 |     0 |           |       |
+|     LUT as Shift Register  |    0 |     0 |           |       |
+| Slice Registers            | 1028 |     0 |     41600 |  2.47 |
+|   Register as Flip Flop    | 1028 |     0 |     41600 |  2.47 |
+|   Register as Latch        |    0 |     0 |     41600 |  0.00 |
+| F7 Muxes                   |    4 |     0 |     16300 |  0.02 |
+| F8 Muxes                   |    1 |     0 |      8150 |  0.01 |
++----------------------------+------+-------+-----------+-------+
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 0     |          Yes |           - |        Reset |
+| 66    |          Yes |         Set |            - |
+| 962   |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Slice Logic Distribution
+---------------------------
+
++-------------------------------------------+------+-------+-----------+-------+
+|                 Site Type                 | Used | Fixed | Available | Util% |
++-------------------------------------------+------+-------+-----------+-------+
+| Slice                                     |  566 |     0 |      8150 |  6.94 |
+|   SLICEL                                  |  377 |     0 |           |       |
+|   SLICEM                                  |  189 |     0 |           |       |
+| LUT as Logic                              | 1683 |     0 |     20800 |  8.09 |
+|   using O5 output only                    |    0 |       |           |       |
+|   using O6 output only                    | 1426 |       |           |       |
+|   using O5 and O6                         |  257 |       |           |       |
+| LUT as Memory                             |   48 |     0 |      9600 |  0.50 |
+|   LUT as Distributed RAM                  |   48 |     0 |           |       |
+|     using O5 output only                  |    0 |       |           |       |
+|     using O6 output only                  |    0 |       |           |       |
+|     using O5 and O6                       |   48 |       |           |       |
+|   LUT as Shift Register                   |    0 |     0 |           |       |
+| LUT Flip Flop Pairs                       |  458 |     0 |     20800 |  2.20 |
+|   fully used LUT-FF pairs                 |   58 |       |           |       |
+|   LUT-FF pairs with one unused LUT output |  387 |       |           |       |
+|   LUT-FF pairs with one unused Flip Flop  |  380 |       |           |       |
+| Unique Control Sets                       |   51 |       |           |       |
++-------------------------------------------+------+-------+-----------+-------+
+* Note: Review the Control Sets Report for more information regarding control sets.
+
+
+3. Memory
+---------
+
++-------------------+------+-------+-----------+-------+
+|     Site Type     | Used | Fixed | Available | Util% |
++-------------------+------+-------+-----------+-------+
+| Block RAM Tile    |  0.5 |     0 |        50 |  1.00 |
+|   RAMB36/FIFO*    |    0 |     0 |        50 |  0.00 |
+|   RAMB18          |    1 |     0 |       100 |  1.00 |
+|     RAMB18E1 only |    1 |       |           |       |
++-------------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+4. DSP
+------
+
++-----------+------+-------+-----------+-------+
+| Site Type | Used | Fixed | Available | Util% |
++-----------+------+-------+-----------+-------+
+| DSPs      |    0 |     0 |        90 |  0.00 |
++-----------+------+-------+-----------+-------+
+
+
+5. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |   23 |    23 |       106 | 21.70 |
+|   IOB Master Pads           |   11 |       |           |       |
+|   IOB Slave Pads            |   11 |       |           |       |
+| Bonded IPADs                |    0 |     0 |        10 |  0.00 |
+| Bonded OPADs                |    0 |     0 |         4 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
+| PHASER_REF                  |    0 |     0 |         5 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        20 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        20 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |         5 |  0.00 |
+| IBUFDS                      |    0 |     0 |       104 |  0.00 |
+| GTPE2_CHANNEL               |    0 |     0 |         2 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        20 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        20 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       250 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |         2 |  0.00 |
+| ILOGIC                      |    0 |     0 |       106 |  0.00 |
+| OLOGIC                      |    0 |     0 |       106 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
+
+
+6. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFIO      |    0 |     0 |        20 |  0.00 |
+| MMCME2_ADV |    0 |     0 |         5 |  0.00 |
+| PLLE2_ADV  |    1 |     0 |         5 | 20.00 |
+| BUFMRCE    |    0 |     0 |        10 |  0.00 |
+| BUFHCE     |    0 |     0 |        72 |  0.00 |
+| BUFR       |    0 |     0 |        20 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+7. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+--------+
+|  Site Type  | Used | Fixed | Available |  Util% |
++-------------+------+-------+-----------+--------+
+| BSCANE2     |    0 |     0 |         4 |   0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |   0.00 |
+| DNA_PORT    |    0 |     0 |         1 |   0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |   0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |   0.00 |
+| ICAPE2      |    0 |     0 |         2 |   0.00 |
+| PCIE_2_1    |    0 |     0 |         1 |   0.00 |
+| STARTUPE2   |    1 |     0 |         1 | 100.00 |
+| XADC        |    0 |     0 |         1 |   0.00 |
++-------------+------+-------+-----------+--------+
+
+
+8. Primitives
+-------------
+
++-----------+------+---------------------+
+|  Ref Name | Used | Functional Category |
++-----------+------+---------------------+
+| FDRE      |  962 |        Flop & Latch |
+| LUT6      |  902 |                 LUT |
+| LUT5      |  309 |                 LUT |
+| LUT4      |  296 |                 LUT |
+| LUT3      |  201 |                 LUT |
+| LUT2      |  195 |                 LUT |
+| CARRY4    |  144 |          CarryLogic |
+| RAMD32    |   72 |  Distributed Memory |
+| FDSE      |   66 |        Flop & Latch |
+| LUT1      |   37 |                 LUT |
+| RAMS32    |   24 |  Distributed Memory |
+| OBUF      |   17 |                  IO |
+| IBUF      |    6 |                  IO |
+| OBUFT     |    4 |                  IO |
+| MUXF7     |    4 |               MuxFx |
+| STARTUPE2 |    1 |              Others |
+| RAMB18E1  |    1 |        Block Memory |
+| PLLE2_ADV |    1 |               Clock |
+| MUXF8     |    1 |               MuxFx |
+| BUFG      |    1 |               Clock |
++-----------+------+---------------------+
+
+
+9. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+10. Instantiated Netlists
+-------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+report_utilization: Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2481.379 ; gain = 0.000 ; free physical = 9072 ; free virtual = 44179
+# report_timing
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Fri Jun 25 10:58:05 2021
+| Host         : horacio running 64-bit Ubuntu 18.04.5 LTS
+| Command      : report_timing
+| Design       : basys3
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             7.231ns  (required time - arrival time)
+  Source:                 soc/spimemio/xfer/xfer_dspi_reg/C
+                            (rising edge-triggered cell FDRE clocked by CLKOUT_5  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            soc/spimemio/xfer_io0_90_reg/D
+                            (falling edge-triggered cell FDRE clocked by CLKOUT_5  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             CLKOUT_5
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (CLKOUT_5 fall@10.000ns - CLKOUT_5 rise@0.000ns)
+  Data Path Delay:        2.741ns  (logic 0.842ns (30.714%)  route 1.899ns (69.286%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.819ns = ( 15.819 - 10.000 ) 
+    Source Clock Delay      (SCD):    6.102ns
+    Clock Pessimism Removal (CPR):    0.312ns
+  Clock Uncertainty:      0.089ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.163ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLKOUT_5 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.253     2.711    clk_IBUF
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.799 r  PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.655     4.455    CLKOUT_5
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.551 r  CLKOUT_5_BUFG_inst/O
+                         net (fo=1126, routed)        1.551     6.102    soc/spimemio/xfer/CLKOUT_5_BUFG
+    SLICE_X9Y26          FDRE                                         r  soc/spimemio/xfer/xfer_dspi_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y26          FDRE (Prop_fdre_C_Q)         0.419     6.521 r  soc/spimemio/xfer/xfer_dspi_reg/Q
+                         net (fo=23, routed)          1.272     7.793    soc/spimemio/xfer/p_0_in[0]
+    SLICE_X6Y24          LUT6 (Prop_lut6_I3_O)        0.299     8.092 f  soc/spimemio/xfer/xfer_io0_90_i_2/O
+                         net (fo=1, routed)           0.627     8.720    soc/spimemio/xfer/xfer_io0_90_i_2_n_0
+    SLICE_X5Y24          LUT5 (Prop_lut5_I4_O)        0.124     8.844 r  soc/spimemio/xfer/xfer_io0_90_i_1/O
+                         net (fo=2, routed)           0.000     8.844    soc/spimemio/xfer_io0_do
+    SLICE_X5Y24          FDRE                                         r  soc/spimemio/xfer_io0_90_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLKOUT_5 fall edge)
+                                                     10.000    10.000 f  
+    W5                                                0.000    10.000 f  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 f  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.181    12.569    clk_IBUF
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083    12.652 f  PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.576    14.228    CLKOUT_5
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    14.319 f  CLKOUT_5_BUFG_inst/O
+                         net (fo=1126, routed)        1.500    15.819    soc/spimemio/CLKOUT_5_BUFG
+    SLICE_X5Y24          FDRE                                         r  soc/spimemio/xfer_io0_90_reg/C  (IS_INVERTED)
+                         clock pessimism              0.312    16.131    
+                         clock uncertainty           -0.089    16.043    
+    SLICE_X5Y24          FDRE (Setup_fdre_C_D)        0.032    16.075    soc/spimemio/xfer_io0_90_reg
+  -------------------------------------------------------------------
+                         required time                         16.075    
+                         arrival time                          -8.844    
+  -------------------------------------------------------------------
+                         slack                                  7.231    
+
+
+
+
+# write_verilog -force test_synth.v
+# write_verilog -force basys3_synth.v
+# write_bitstream -force test_basys3.bit
+Command: write_bitstream -force test_basys3.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./test_basys3.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+11 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2671.000 ; gain = 189.621 ; free physical = 9067 ; free virtual = 44200
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 25 10:58:19 2021...
